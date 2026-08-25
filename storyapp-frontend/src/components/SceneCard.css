@@ -1,0 +1,152 @@
+.scene-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.scene-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(217, 162, 59, 0.32);
+}
+
+.scene-card__index {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 10.5px;
+  color: var(--gold-bright);
+  background: rgba(18, 16, 36, 0.65);
+  padding: 3px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  z-index: 2;
+}
+
+.scene-card__image {
+  position: relative;
+  height: 170px;
+  background: var(--ink-deep);
+  overflow: hidden;
+}
+
+.scene-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.2s ease;
+}
+
+.scene-card:hover .scene-card__image img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.scene-card__image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  opacity: 0.4;
+}
+
+.scene-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--ink-deep);
+  background: var(--gold);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: scale(0.85);
+  top: calc(50% - 22px);
+  left: calc(50% - 22px);
+}
+
+.scene-card:hover .scene-card__play {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scene-card__body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.scene-card__setting {
+  font-size: 16px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.scene-card__mood {
+  align-self: flex-start;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--sage-bright);
+  background: rgba(79, 112, 104, 0.15);
+  border: 1px solid rgba(79, 112, 104, 0.35);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.scene-card__excerpt {
+  font-size: 13px;
+  color: var(--parchment-dim);
+  font-style: italic;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.scene-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 6px;
+  border-top: 1px solid var(--ink-line);
+}
+
+.scene-card__characters {
+  font-size: 12px;
+  color: var(--parchment-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.scene-card__count {
+  font-size: 10.5px;
+  color: var(--leather-bright);
+  flex-shrink: 0;
+}

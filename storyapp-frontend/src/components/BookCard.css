@@ -1,0 +1,94 @@
+.book-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink-raised);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.22s cubic-bezier(0.2, 0.7, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+a.book-card:hover {
+  transform: translateY(-6px) rotate(-0.4deg);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(217, 162, 59, 0.3);
+}
+
+.book-card--disabled {
+  opacity: 0.88;
+  cursor: default;
+}
+
+.book-card__spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.spine--gold { background: linear-gradient(180deg, var(--gold), var(--gold-deep)); }
+.spine--leather { background: linear-gradient(180deg, var(--leather-bright), var(--leather)); }
+.spine--sage { background: linear-gradient(180deg, var(--sage-bright), var(--sage)); }
+
+.book-card__cover {
+  height: 160px;
+  background: var(--ink-deep);
+  margin-left: 6px;
+  overflow: hidden;
+}
+
+.book-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+a.book-card:hover .book-card__cover img {
+  transform: scale(1.04);
+}
+
+.book-card__cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--parchment-faint);
+  background: radial-gradient(circle at 50% 30%, rgba(217, 162, 59, 0.08), transparent 70%);
+}
+
+.book-card__body {
+  padding: 16px 18px 20px;
+  margin-left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.book-card__title {
+  font-size: 18px;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-card__meta {
+  font-size: 11.5px;
+  color: var(--parchment-faint);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.status-pill {
+  align-self: flex-start;
+}

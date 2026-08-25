@@ -1,0 +1,21 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 140px 24px;
+}
+
+.not-found__mark {
+  font-size: 28px;
+  color: var(--gold);
+}
+
+.not-found h1 {
+  font-size: 28px;
+}
+
+.not-found p {
+  color: var(--parchment-dim);
+}

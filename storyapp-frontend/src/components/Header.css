@@ -1,0 +1,79 @@
+.site-header {
+  border-bottom: 1px solid var(--ink-line);
+  background: linear-gradient(180deg, rgba(18, 16, 36, 0.6), transparent);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand__mark {
+  color: var(--gold);
+  font-size: 18px;
+  transition: transform 0.4s ease;
+}
+
+.brand:hover .brand__mark {
+  transform: rotate(20deg);
+}
+
+.brand__word {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--parchment);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.site-nav__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--parchment-dim);
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.site-nav__link:hover {
+  color: var(--parchment);
+  background: rgba(250, 246, 236, 0.05);
+}
+
+.site-nav__link.is-active {
+  color: var(--parchment);
+}
+
+.site-nav__link--cta {
+  background: var(--gold);
+  color: var(--ink-deep);
+  margin-left: 8px;
+}
+
+.site-nav__link--cta:hover {
+  background: var(--gold-bright);
+  color: var(--ink-deep);
+}
+
+.site-nav__link--cta.is-active {
+  background: var(--gold-bright);
+  color: var(--ink-deep);
+}

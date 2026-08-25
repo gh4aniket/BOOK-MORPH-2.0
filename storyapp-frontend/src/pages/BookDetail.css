@@ -1,0 +1,113 @@
+.book-detail {
+  padding: 32px 28px 100px;
+}
+
+.book-detail__back {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--parchment-faint);
+  margin-bottom: 24px;
+  transition: color 0.15s ease;
+}
+.book-detail__back:hover {
+  color: var(--gold-bright);
+}
+
+.book-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.book-detail__title {
+  font-size: 32px;
+  margin: 12px 0 12px;
+  max-width: 600px;
+}
+
+.book-detail__stats {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--parchment-faint);
+}
+
+.book-detail__header-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.book-detail__cast {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.book-detail__cast-label {
+  font-size: 11px;
+  color: var(--leather-bright);
+  letter-spacing: 0.1em;
+  padding-top: 6px;
+  flex-shrink: 0;
+}
+
+.book-detail__cast-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cast-tag {
+  font-size: 12.5px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(122, 75, 58, 0.18);
+  border: 1px solid rgba(122, 75, 58, 0.4);
+  color: var(--parchment-dim);
+}
+
+.book-detail__scenes-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.book-detail__scenes-header h2 {
+  font-size: 22px;
+}
+
+.book-detail__scenes-header p {
+  font-size: 13px;
+  color: var(--parchment-faint);
+}
+
+.book-detail__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.book-detail__state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 100px 0;
+  text-align: center;
+  color: var(--parchment-dim);
+}
+
+.book-detail__state--error p {
+  color: var(--vermilion);
+}

@@ -1,0 +1,88 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Uploads / user-generated files
+uploads/
+public/uploads/
+
+# Temporary files
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# VS Code settings (keep if your team wants to share them)
+# !.vscode/settings.json
+
+# Environment-specific files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# React
+.cache/
+
+# Vite
+.vite/
+
+# Parcel
+.parcel-cache/
+
+# Misc
+*.tgz
+*.tar.gz
+
+# Python virtual environment (if your project also has one)
+venv/
+.venv/
+env/
+ENV/
+
+# Database / local files
+*.sqlite
+*.sqlite3
+
+# Certificates / private keys
+*.pem
+*.key
+*.crt
